@@ -9,7 +9,7 @@ div#content {
   width: 70%;
   font-family: text;
   margin: auto;
-
+  padding: 15px;
 }
 
 div#content p{
