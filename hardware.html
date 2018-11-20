@@ -2,8 +2,10 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png"/>
     <link rel="stylesheet" type="text/css" href="css/topbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/hardware.css"/>
     <title>Checkmatch</title>
   </head>
   <body>
@@ -12,7 +14,7 @@
       <div id="topbar">
 
         <header id="header">
-          <a href="index.html"><img src="img/logo.png" align="middle"></a>
+          <a href="index.html"><img src="img/logo.png"></a>
         </header>
 
         <nav id="navbar">
@@ -23,9 +25,79 @@
             <li><a href="about.html"><h2>Sobre</h2></a></li>
           </ul>
         </nav>
+      </div>
+      <div id="content">
+        <section>
+          <article id="introducao">
+            <h1>Uma Breve Introdução</h1>
+            <p>Para pensar de que forma iríamos articular o nosso projeto usamos
+              nossos conhecimentos correlatos a partidas de xadrez <a href="index.html">(descrito no vídeo
+                na página inicial)</a>, sensores e Arduino. Bem, um tabuleiro de xadrez é
+                dividido em 64 quadrados chamados casas, logo, concluímos que seriam
+                necessários 64 sensores, um para cada “casa” do tabuleiro de xadrez.
+                Também um Arduino com no mínimo 16 pinos de entrada e saída(input e output),
+                um resistor numa média de 10k de resistência e uma fonte de energia.
+                Deixamos claro que há outros meios de se fazer o sensoriamento.</p>
+          </article>
+
+          <article id="funcinamento">
+            <h1>Como Funciona?</h1>
+              <img src="img/tabuleiro.jpeg" align="right"/>
+              <p>Para saber onde cada peça foi jogada, teríamos que pôr um pequeno ímã fixo dentro
+                 de casa peça, já que que os sensores (Reed-switch) são sensores magnéticos, então as
+                 alterações no campo magnético ao redor deles devido o ímã da peça iriam definir se
+                 foi feito algum movimento no campo de batalha. Assim, os estímulos recebidos pelos
+                 sensores presentes nas casas alteradas, ou seja, a casa em que a peça estava e a
+                 casa que ela está presente, fariam com que o sensor fosse ativado.</p>
+              <p>Como você já sabe, nós usaríamos um Arduino com 16 pinos. Então, esses pinos seriam
+                divididos em duas partes, cada uma delas com 8 pinos. Oito pinos ficariam com o "IN"
+                e os oito restantes com o "OUT". Os pinos IN seriam responsáveis por receber os movimentos
+                captados pelos sensores(reed switch) nas colunas do tabuleiro, ou seja, nas casas que nomeadas da letra
+                "a" até  a letra "h", como você pode ver na imagem ao lado. Já os oito que sobraram(OUT),
+                pegariam os movimentos captados nas linhas, que são as casas enumeradas do número um ao número
+                oito (olhe novamente a imagem). O Arduino fará o processo de "checagem", que seria fazer a leitura
+                do tabuleiro, em uma frequência muito rápida, cerca de 20Mhz por segundo, assim não vai passar em
+                em branco nenhum movimento. Após este processo ser realizado, o Arduino mandará essas informações
+                para um computador que nele está ligado. Para saber o restante do processo de automação
+                <a href="software.html">clique aqui</a>.</p>
+            </article>
+
+          <article id="arduino">
+            <h1>O que é um Arduino?</h1>
+            <img src="img/arduino.png" align="left"/>
+            <p>O <a href="https://www.arduino.cc/" target="_blank">Arduino</a> foi criado em 2005 por um grupo de 5 pesquisadores : Massimo Banzi, David,
+              Tom Igoe, Gianluca Martino e David Mellis. O objetivo era elaborar um dispositivo que
+              fosse ao mesmo tempo barato, funcional e fácil de programar, sendo dessa forma acessivel
+              a estudantes e projetistas amadores. Além disso, foi adotado o conceito de hardware livre,
+              o que significa que qualquer um pode montar, modificar, melhorar e personalizar o Arduino,
+              partindo do mesmo hardware básico.</p>
+              <p>Assim, foi criada uma placa composta por um microcontrolador Atmel, circuitos de entrada/saída
+                e que pode ser facilmente conectada a um computador e programada via IDE (Integrated Development
+                Environment, ou Ambiente de Desenvolvimento Integrado) utilizando uma linguagem baseada em C/C++,
+                sem a necessidade de equipamentos extras além de um cabo USB.</p>
+          </article>
+
+          <article id="reedswitch">
+            <h1>O que é um reed-switch?</h1>
+            <img src="img/reed-switch.png" align="left">
+            <p>Os reed-switches ou interruptores de lâminas consistem em dispositivos formados por um bulbo de vidro no interior do qual
+               existem lâminas flexíveis feitas de materiais que podem sofrer a ação de campos magnéticos. O bulbo de vidro é cheio com
+               um gás inerte de modo a evitar a ação corrosiva do ar sobre as lâminas, o que afetaria o contato elétrico em pouco tempo.</p>
+            <p>Nas condições normais, as lâminas estão separadas e nenhuma corrente pode circular através do componente. Ele opera como uma chave aberta.</p>
+            <p>Aproximando um imã permanente do dispositivo, a ação do campo magnético faz com que as lâminas se magnetizem e com
+              isso se atraiam, unindo-se. Nestas condições o contacto elétrico é fechado.</p>
+          </article>
+
+          <article id="resistor">
+            <h1>O que é um Resistor?</h1>
+            <img src="img/resistor.png" align="right"/>
+            <p>Resistores são dispositivos que compõem circuitos elétricos diversos, a sua finalidade básica é a conversão de energia elétrica em energia térmica 
+              (Efeito Joule). Outra função dos resistores é a possibilidade de alterar a diferença de potencial em determinada parte do circuito, isso ocorre por
+               conta da diminuição da corrente elétrica devido à presença do equipamento.</p>
+          </article>
+        </section>
 
       </div>
-
     </div>
   </body>
 </html>

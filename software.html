@@ -2,8 +2,10 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png"/>
     <link rel="stylesheet" type="text/css" href="css/topbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/software.css"/>
     <title>Checkmatch</title>
   </head>
   <body>
@@ -12,7 +14,7 @@
       <div id="topbar">
 
         <header id="header">
-          <a href="index.html"><img src="img/logo.png" align="middle"></a>
+          <a href="index.html"><img src="img/logo.png"></a>
         </header>
 
         <nav id="navbar">
@@ -23,9 +25,28 @@
             <li><a href="about.html"><h2>Sobre</h2></a></li>
           </ul>
         </nav>
-
       </div>
 
+      <div id="content">
+        <article id="logica">
+          <h1>Lógica do Projeto</h1>
+          <p>O software do projeto se resume em "rastrear" as peças pelo tabuleiro
+            a partir de sensores(reed-switch) instalados em baixo das casas do tabuleiro
+            controlados por um <a href="https://www.arduino.cc/" target="_blank">Arduino</a>.</p>
+            <p>A partir disso, criamos uma proposta de software para operar o <a href="hardware.html">hardware</a>
+              proposto pelo outro grupo. O software usa como referência a posição inicial das peças e quando removidas
+              de sua posição inicial, o sensor daquela casa desliga e quando o proximo sensor é ativado, o software
+              consegue detectar se a jogada foi valida ou não, no final da partida, é gerado um relatorio
+              com cada jogada feita e dados gerais da partida.</p>
+
+              <ul>
+                <li><img src="img/jogadavalida.png"/><h5>Jogada Valida</h5></li>
+                <li><img src="img/jogadainvalida.png"/> <h5>Jogada Invalida</h5></li>
+              </ul>
+
+
+        </article>
+      </div>
     </div>
   </body>
 </html>

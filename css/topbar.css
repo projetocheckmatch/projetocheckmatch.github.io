@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: menu;
+  src: url(../fonts/PT_Sans-Web-Bold.ttf);
+}
 
 div#topbar {
   background-color: black;
@@ -15,6 +19,7 @@ header#header img{
   padding: 30px;
   position: relative;
   margin-left: 20px;
+  align-self: center;
 }
 
 header#header a{
@@ -25,13 +30,14 @@ header#header a{
 nav#navbar{
   margin-top: -100px;
   position: static;
-  font-size: 12pt;
+  display: block;
 }
 nav#navbar ul {
   position: sticky;
   text-align: right;
+  font-family: menu;
   text-transform: uppercase;
-  overflow: hidden  ;
+  overflow: hidden;
 }
 nav#navbar li{
   display: inline-block;
@@ -40,7 +46,6 @@ nav#navbar li{
 }
 
 nav#navbar a {
-
   text-decoration: none;
   color: white;
 }

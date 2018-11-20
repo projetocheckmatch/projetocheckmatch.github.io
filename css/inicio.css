@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@font-face{
+  font-family: title;
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+div#content {
+  padding: 10px;
+}
+div#content h1 {
+  text-align: center;
+  font-family: title;
+  color: #808080;
+}
+
+div#content iframe{
+    border: none;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}

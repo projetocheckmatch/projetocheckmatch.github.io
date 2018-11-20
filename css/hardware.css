@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+@font-face {
+  src: url(../fonts/Ubuntu-Regular.ttf);
+  font-family: text;
+}
+
+
+div#content {
+  max-width: 70%;
+  font-family: text;
+  margin: auto;
+  padding: 15px;
+}
+div#content a {
+  text-decoration: none;
+}
+
+div#content p {
+    color: #808080;
+    text-align: justify;
+}
+
+article#funcinamento img{
+  max-width: 18%;
+  overflow: hidden;
+  margin-left: 15px;
+}
+
+article#arduino img {
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+article#reedswitch img {
+  width: 20%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+article#resistor img {
+  width: 15%;
+  margin-left: 15px;
+}
